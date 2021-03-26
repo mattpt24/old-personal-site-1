@@ -1,0 +1,198 @@
+@import "./colors";
+@import "./fonts";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+
+    .sidebar {
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        background: rgb(0, 1, 22);
+        padding: 30px 0;
+        z-index: 1;
+
+
+        .socials {
+            display: flex;
+            justify-content: space-around;
+            width: 70%;
+            margin: 0 auto;
+            color: $primary;
+            position: relative;
+            top: 40px;
+        }
+
+        h4 {
+            font-family: $title;
+            font-size: 50px;
+            color: $primary;
+            animation: logo 2s infinite;
+
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+
+        }
+
+        .nav-items {
+            transition: all 0.3s ease;
+            color: #fff;
+            text-align: center;
+            font-family: $regular;
+            position: relative;
+            bottom: 40px;
+            
+    
+            &:hover {
+                transition: all 0.5s ease;
+                color:skyblue;
+            }
+        }
+    
+        .social-icons {
+            transition: all 0.5s ease;
+            color: $primary;
+    
+            &:hover {
+                transition: all 0.5s ease;
+                color: skyblue;
+                transform: translateY(-4px);
+            }
+        }
+    }
+
+
+
+
+
+.main-content {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+    background: {
+        image:  url("https://images.unsplash.com/photo-1548092372-0d1bd40894a3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+        size: cover;
+        position: center center;
+    }
+
+    .intro {
+      margin-top: 200px;
+
+    }
+
+    h1 {
+        color: $primary;
+        font-family: $title;
+        font-size: 80px;
+    }
+
+    h2 {
+        color: lightgrey;
+        font-family: $regular;
+    }
+
+    .about-btn  {
+        transition: all 0.5s ease;
+        background:lightblue;
+        padding: 0.5rem 3rem;
+        border-radius: 30px;
+        font-size: 20px;
+        letter-spacing: 3px;
+        color: $blue;
+        font-family: $regular;
+        margin-top: 100px;
+        position: relative;
+        top: 80px;
+
+        &:hover {
+            transition: all 0.5s ease;
+            background: #98ff98;
+        }
+
+
+        &:hover > .fa-arrow-down {
+            animation: logo 1s infinite;
+        }
+    }
+
+
+
+}
+
+}
+
+// 
+
+
+
+
+
+
+
+
+// LOGO ANIMATION
+
+@keyframes logo {
+    0%{
+       transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
+
+// MOBILE VERSION
+
+@media screen and (max-width: 900px) {
+    
+    
+    .wrapper .sidebar {
+        flex-direction: row;
+        height: auto;
+        padding: 0;
+        width: 100%;
+        height: 70px;
+
+        .nav-links ,a{
+        position: relative;
+        top: 10px;
+        }
+
+        .socials {
+            display: none;
+        }
+
+        h4 {
+            animation: none;
+        }
+    }
+
+   
+}
