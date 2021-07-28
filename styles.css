@@ -95,7 +95,7 @@
 .wrapper .sidebar .social-icons:hover {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  color: rgb(232, 135, 235);;
+  color: rgb(235, 188, 135);;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
